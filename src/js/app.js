@@ -7,4 +7,4 @@ const coupon = 300;
 const totalPrice = add(item1Price, item2Price);
 const priceAfterApplyCoupon = substruct(totalPrice, coupon);
 
-$('body').text(priceAfterApplyCoupon)l
+$('body').text(priceAfterApplyCoupon);
