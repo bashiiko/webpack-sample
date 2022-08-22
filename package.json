@@ -8,5 +8,8 @@
   "main": "index.js",
   "repository": "git@github.com:bashiiko/webpack-sample.git",
   "author": "naoko",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {    
+    "build": "webpack"
+  }
 }
