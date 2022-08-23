@@ -1,2 +1,1 @@
-const message = "Hello webpack!!";
-console.log(messsage);
+import '../scss/style.scss'

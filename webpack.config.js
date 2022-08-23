@@ -20,6 +20,15 @@ module.exports = {
         test: /\.js$/, // ローダーの処理対象ファイル
         include: path.resolve(__dirname, 'src/js'), // ローダーの処理対象となるディレクトリ,
         use: 'babel-loader', // 利用するローダー
+      },
+      {
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/scss'),
+        use: [ // ローダーを複数利用したい場合は、useプロパティに配列で指定できる。ローダーは順番の逆から実行されるので注意
+          'style-loader', // バンドルしたCSSをHTMLに挿入する
+          'css-loader', // CSSをモジュールに変換する
+          'sass-loader' // SassをCSSにコンパイルする
+        ]
       }
     ]
   }
