@@ -14,4 +14,13 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: 'js/bundle.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // ローダーの処理対象ファイル
+        include: path.resolve(__dirname, 'src/js'), // ローダーの処理対象となるディレクトリ,
+        use: 'babel-loader', // 利用するローダー
+      }
+    ]
+  }
 }
